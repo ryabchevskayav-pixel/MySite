@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Живой английский — Репетитор английского для детей</title>
+  <meta name="description" content="Интерактивные уроки английского для детей 5–12 лет. Игры, аудирование, чтение по книгам и мини-спектакли — ребёнок заговорит по-английски естественно." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#2D1E18;
+      --bg-2:#5C5C5A;
+      --accent:#6195B6;
+      --paper:#DFCEB4;
+      --stone:#7B7163;
+      --radius:14px;
+      --container:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg-1), var(--bg-2));
+      color:var(--paper);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--container);margin:40px auto;padding:28px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),rgba(255,255,255,0.05));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+    .logo svg{width:36px;height:36px}
+    .title{font-weight:700;font-size:18px}
+    .subtitle{font-size:12px;color:var(--paper);opacity:0.9}
+
+    nav a{color:var(--paper);text-decoration:none;margin-left:18px;font-weight:600;opacity:0.9}
+    nav a.cta{background:var(--accent);padding:10px 14px;border-radius:10px;color:#122;box-shadow:0 6px 16px rgba(97,149,182,0.12)}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:26px;align-items:center}
+    .hero h1{font-size:32px;margin:0 0 12px 0;color:var(--paper)}
+    .hero p{margin:0 0 18px 0;color:var(--paper);opacity:0.95}
+    .badge{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.04);color:var(--paper);font-weight:600;font-size:13px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    .services{display:flex;flex-direction:column;gap:10px}
+    .service{display:flex;gap:12px;align-items:flex-start}
+    .icon{width:44px;height:44;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center}
+    .service h4{margin:0;font-size:15px}
+    .service p{margin:4px 0 0 0;font-size:13px;color:var(--paper);opacity:0.9}
+
+    .about{display:flex;gap:18px;margin-top:22px}
+    .about .photo{width:220px;height:220px;border-radius:16px;background:linear-gradient(135deg,var(--paper),rgba(255,255,255,0.9));box-shadow:0 10px 30px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;color:var(--bg-1);font-weight:700}
+    .about p{margin:0}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .feat{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px}
+    .feat h5{margin:0 0 6px 0}
+    .small{font-size:13px;color:var(--paper);opacity:0.9}
+
+    .testimonials{margin-top:20px}
+    .testimonials .t{margin-bottom:12px;padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
+
+    .contact{display:flex;gap:18px;align-items:center;margin-top:22px}
+    .contact a.btn{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--accent);color:#112;font-weight:700;text-decoration:none}
+    .contact .muted{font-size:13px;color:var(--paper);opacity:0.9}
+
+    footer{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .about{flex-direction:column}
+      nav a{margin-left:10px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12c2.5-6 8-9 12-9s8 3 8 9c0 6-5 9-8 9s-9-3-12-9z" fill="white" opacity="0.95"/></svg>
+        </div>
+        <div>
+          <div class="title">Живой английский — [Ваше имя]</div>
+          <div class="subtitle">Репетитор для детей 5–12 лет · Игровая методика погружения</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">О себе</a>
+        <a href="#services">Услуги</a>
+        <a href="#reviews">Отзывы</a>
+        <a class="cta" href="#contact">Записаться</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">Понятный английский для школьников</span>
+        <h1>Я учу детей говорить по‑английски через истории, игры и практику</h1>
+        <p>Мои уроки строятся на глубокой практике: слышим, делаем, говорим. Я создаю нужный контекст, где ребёнок применяет язык сразу целыми предложениями.</p>
+
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <a class="btn" href="#contact" style="text-decoration:none">Записать ребёнка на пробный урок</a>
+          <a href="#services" style="padding:12px 14px;border-radius:12px;background:transparent;border:1px solid rgba(255,255,255,0.03);text-decoration:none;color:var(--paper);">Смотреть программы</a>
+        </div>
+
+        <div class="features" style="margin-top:18px">
+          <div class="feat">
+            <h5>Говорение как навык</h5>
+            <div class="small">Через сценки, диалоги и мини-спектакли дети учатся строить фразы и общаться.</div>
+          </div>
+          <div class="feat">
+            <h5>Активное аудирование</h5>
+            <div class="small">Аудио-сцены и повторения встроены в урок, чтобы понимание шло раньше формального объяснения.</div>
+          </div>
+          <div class="feat">
+            <h5>Авторские материалы</h5>
+            <div class="small">Иллюстрации, видео и интерактивы — всё оформлено профессионально и адаптировано для детей.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">Что получит ребёнок</h3>
+        <ul style="padding-left:18px;margin:8px 0 0 0">
+          <li>Говорит целыми предложениями</li>
+          <li>Понимает английскую речь</li>
+          <li>Уверенность и творческая практика</li>
+          <li>Материалы по книгам с иллюстрациями и видео</li>
+        </ul>
+
+        <div style="margin-top:12px">
+          <strong>Цена пробного урока:</strong> 700 руб · <span style="opacity:0.9">45 минут</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="about">
+      <div class="card" style="flex:1">
+        <h3>Обо мне</h3>
+        <p>Я — преподаватель английского, который делает ставку на живую речь и понимание. Моя цель — чтобы ваш ребёнок не боялся говорить и использовал язык в игре. Я создаю интерактивные разработки по книгам, сопровождаю их иллюстрациями и аудио, использую Genially и платформы с автопроверкой.</p>
+
+        <h4 style="margin-top:12px">Принципы моей работы</h4>
+        <ul style="padding-left:18px;margin:8px 0 0 0">
+          <li>Погружение — через сюжет и действие</li>
+          <li>Практика до осмысления правил</li>
+          <li>Игровая мотивация и безопасная среда для ошибок</li>
+          <li>Интерактив и визуал — ключ к вниманию</li>
+        </ul>
+      </div>
+
+      <div style="width:320px">
+        <div class="photo">Ваш портрет</div>
+        <div style="margin-top:12px" class="card">
+          <strong>Подходит детям:</strong>
+          <div class="small" style="margin-top:8px">5–12 лет, уровни A0–A2. Группы и индивидуально.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" style="margin-top:20px">
+      <h3>Программы и форматы</h3>
+      <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:260px">
+          <h4>Курс по книгам (8 модулей)</h4>
+          <p class="small">Интерактивные модули: аудио-сцены, словарные карты, мини-спектакли и задания в Genially.</p>
+        </div>
+        <div class="card" style="flex:1;min-width:260px">
+          <h4>Онлайн-группа (6–8 чел.)</h4>
+          <p class="small">Игровые уроки 45 минут, фокус на говорении и аудировании.</p>
+        </div>
+        <div class="card" style="flex:1;min-width:260px">
+          <h4>Индивидуальные занятия</h4>
+          <p class="small">Персональная программа, адаптация истории под интересы ребёнка.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="testimonials">
+      <h3>Отзывы родителей</h3>
+      <div class="t">«Мой сын стал говорить фразами — и сам просит ещё уроки!» — Ольга, мама, 8 лет</div>
+      <div class="t">«Занятия отлично дополняют школьную программу — в школе правила, у нас практика» — Марина, мама, 10 лет</div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="card" style="flex:1">
+        <h3>Записаться на пробный урок</h3>
+        <p class="small">Оставьте контакт, и я свяжусь с вами для выбора удобного времени.</p>
+        <p style="margin:12px 0"><strong>Email:</strong> <a href="mailto:yourname@example.com" style="color:var(--accent);text-decoration:none">yourname@example.com</a></p>
+        <p style="margin:4px 0"><strong>Телеграм:</strong> <a href="https://t.me/yourusername" style="color:var(--accent);text-decoration:none">@yourusername</a></p>
+        <div style="margin-top:8px"><a href="mailto:yourname@example.com?subject=Пробный%20урок" class="btn">Написать и записаться</a></div>
+      </div>
+
+      <div class="card" style="width:300px">
+        <h4>Частые вопросы</h4>
+        <div style="font-size:13px;color:var(--paper);opacity:0.95">
+          <strong>Подходит ли это к школьной программе?</strong>
+          <div style="opacity:0.85;margin-top:6px">Да — мы дополняем и укрепляем навыки, которые дети получают в школе.</div>
+          <strong style="display:block;margin-top:8px">Что с грамматикой?</strong>
+          <div style="opacity:0.85;margin-top:6px">Сначала практика, потом осмысление — правила приходят из опыта.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="font-size:13px">© Живой английский — [Ваше имя]. Все права защищены.</div>
+      <div style="font-size:13px;color:var(--paper)"></div>
+    </footer>
+  </div>
+</body>
+</html>
